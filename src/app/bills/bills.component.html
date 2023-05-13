@@ -1,0 +1,25 @@
+<div class="container">
+    <nav class="p-2 m-2 border border-black">
+        <h1 class="text-center">LIST OF BILLS</h1>
+      </nav>
+    <div class="card-body">
+        <table class="table mt-3">
+          <thead>
+            <tr>
+              <th>BILL_ID</th>
+              <th>BILLING_DATE</th>
+              <th>CUSTOMER</th>
+              <th>N° ITEMS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let b of bills">
+              <td>{{b.id}}</td>
+              <td>{{b.billingDate}}</td>
+              <td>{{b.customer.name}}</td>
+              <td>{{b.productItems.length}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+</div>
